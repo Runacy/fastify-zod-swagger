@@ -4,7 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsnd --respawn --transpile-only --exit-child src/app.ts"
+    "build": "rm -rf dist && esbuild ./src/*.ts `find ./src \\( -name '*.ts' \\)` --platform=node --outdir=dist --format=cjs",
+    "start": "node ./dist/app.js"
+  },
+  "comment": {
+    "scripts": {
+      "dev": "tsnd --respawn --transpile-only --exit-child src/app.ts"
+    }
   },
   "keywords": [],
   "author": "",
@@ -12,6 +18,7 @@
   "dependencies": {
     "@fastify/swagger": "^8.1.0",
     "@fastify/swagger-ui": "^1.2.0",
+    "esbuild": "^0.15.13",
     "fastify": "^4.9.2",
     "fastify-zod": "^1.2.0",
     "uuid": "^9.0.0",

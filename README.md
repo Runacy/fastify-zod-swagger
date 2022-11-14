@@ -31,3 +31,16 @@ $ npm run dev
 
 This repository stores sample codes for the below article.
 - [Fastifyで作るAPIにZodでスキーマバリデーションをかけながら型定義と実用レベルのOpenAPI仕様を自動生成する](https://dev.classmethod.jp/articles/fastify-zod-openapi/)
+
+
+## memo
+
+- nodeのバージョンを変更して動くかどうか( -> v16.16.0) => ⭕️
+- pnpmではなくyarnにしても動くかどうか => ⭕️
+- tsndからesbuildにしても動くかどうか => ⭕️
+- docsは生成できるはず
+ - 完全な生成はできない
+ - swagger-ui.*.jsみたいなやつはなくてよし
+ - openapi.yamlさえあれば最悪動くっぽい
+  - swagger-codegenで生成したものでもないなあ
+  - jsonは次のようなコードでも問題ないっぽい
